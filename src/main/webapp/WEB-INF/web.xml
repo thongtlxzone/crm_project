@@ -1,0 +1,20 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<!--Noi dinh nghia duong dan va servlet nao se xu ly duong dan nao-->
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+<!--  Dang dinh nghia servlet va chinh thuc khoi tao servlet cho he thong-->
+  <servlet>
+    <servlet-name>java20Servlet</servlet-name>
+    <servlet-class>servlet.java20Servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>java20Servlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+</web-app>
