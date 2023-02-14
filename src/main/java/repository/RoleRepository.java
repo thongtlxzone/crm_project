@@ -54,15 +54,14 @@ public class RoleRepository {
         return isDeleteSuccess;
     }
 
-    public int addRole(String name,String description){
+    public int addNewRole(String name,String description){
         int isAddSuccess = 0;
         Connection connection = MysqlConfig.getConnection();
-        String query = "INSERT INTO roles(name,description) VALUE(?,?)";
+        String query = "INSERT INTO roles(name,description) VALUES(?,?)";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,RoleColumn.NAME.getValue());
-            statement.setString(2,RoleColumn.DESCRIPTION.getValue());
-
+            statement.setString(1,name);
+            statement.setString(2,description);
             isAddSuccess = statement.executeUpdate();
         }catch (Exception e){
             System.out.println("Loi add role" + e.getMessage());

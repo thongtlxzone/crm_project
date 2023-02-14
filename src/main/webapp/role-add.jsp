@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<html lang="en">
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 
 <head>
     <meta charset="utf-8">
@@ -135,19 +136,19 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Tên quyền</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Tên quyền"
+                                        <input id="name" type="text" placeholder="Tên quyền"
                                             class="form-control form-control-line" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Mô tả</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Mô tả" class="form-control form-control-line" />
+                                        <input id="description" type="text" placeholder="Mô tả" class="form-control form-control-line" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-success">Add Role</button>
+                                        <button id="btn-add" type="submit" class="btn btn-success">Add Role</button>
                                         <a href="role-table.html" class="btn btn-primary">Quay lại</a>
                                     </div>
                                 </div>
@@ -176,6 +177,6 @@
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-</body>
-
+    <script src="js/role.js"></script>
+    </body>
 </html>
